@@ -179,11 +179,8 @@
     "connection_params": {},
     "collection_params": {},
     "search_params": [
-      { "parallel": 1, "batch": 1, "threads": 1, "config": {"nprobe": 144} },
-      { "parallel": 2, "batch": 1, "threads": 1, "config": {"nprobe": 144} },
-      { "parallel": 2, "batch": 100, "threads": 20, "config": {"nprobe": 144} },
-      { "parallel": 4, "batch": 1, "threads": 1, "config": {"nprobe": 144} },
-      { "parallel": 4, "batch": 100, "threads": 20, "config": {"nprobe": 144} }
+      { "parallel": 64, "oldway": true, "config": {"nprobe": 144} }
+
     ],
     "upload_params": { "parallel": 8, "index_type": "GPU_IVF_FLAT", "index_params": {"nlist": 4096, "cache_dataset_on_device": "true"  } }
   }

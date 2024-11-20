@@ -111,6 +111,8 @@ class BaseSearcher:
         parallel = self.search_params.get("parallel", 1)
         batch = self.search_params.get("batch", 1)
         threads = self.search_params.get("threads", 1)
+        oldway = self.search_params.get("oldway", False)
+        print("oldway", oldway)
         top = self.search_params.get("top", None)
         
         # setup_search may require initialized client
@@ -145,20 +147,30 @@ class BaseSearcher:
                     sleep_until_next_target()
                 
 
-                query_batches = list(self.batch_iterable(queries, batch))
-                # precisions, latencies = list(
-                #     zip(*pool.imap_unordered(search_one, iterable=tqdm.tqdm(queries)))
-                # )
-                print("starting")
-                start = time.perf_counter()
-                precisions, latencies = list(
-                    zip(*pool.imap_unordered(search_many, iterable=tqdm.tqdm(query_batches)))
-                )
+                
+                
+                
+                
+                if oldway:
+                    query_batches = list(self.batch_iterable(queries, batch))
+                    queries = [item for sublist in query_batches for item in sublist]
+                    print("starting")
+                    start = time.perf_counter()
+                    precisions, latencies = list(
+                        zip(*pool.imap_unordered(search_one, iterable=tqdm.tqdm(queries)))
+                    )
+                else:
+                    query_batches = list(self.batch_iterable(queries, batch))
+                    print("starting")
+                    start = time.perf_counter()
+                    precisions, latencies = list(
+                        zip(*pool.imap_unordered(search_many, iterable=tqdm.tqdm(query_batches)))
+                    )
 
         total_time = time.perf_counter() - start
         print("ending")
         self.__class__.delete_client()
-        if(parallel > 1):
+        if(parallel > 1 and not oldway):
             latencies = [item for sublist in latencies for item in sublist]
         return {
             "total_time": total_time,
@@ -168,6 +180,7 @@ class BaseSearcher:
             "min_time": np.min(latencies),
             "max_time": np.max(latencies),
             "rps": len(latencies) / total_time,
+            "p50_time": np.percentile(latencies, 50),
             "p95_time": np.percentile(latencies, 95),
             "p99_time": np.percentile(latencies, 99),
             "precisions": precisions,
