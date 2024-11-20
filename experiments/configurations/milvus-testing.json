@@ -1,0 +1,257 @@
+[
+    {
+        "name": "milvus-testing-gpuivfflat-64",
+        "engine": "milvus",
+        "connection_params": {},
+        "collection_params": {},
+        "search_params": [
+          { "parallel": 1, "config": {"nprobe": 4} },
+          { "parallel": 1, "config": {"nprobe": 8} },
+          { "parallel": 1, "config": {"nprobe": 16} },
+          { "parallel": 1, "config": {"nprobe": 32} }
+        ],
+        "upload_params": { "parallel": 8, "index_type": "GPU_IVF_FLAT", "index_params": {"nlist": 64, "cache_dataset_on_device": "false"  } }
+      },
+  {
+    "name": "milvus-testing-gpuivfflat-128",
+    "engine": "milvus",
+    "connection_params": {},
+    "collection_params": {},
+    "search_params": [
+      { "parallel": 1, "config": {"nprobe": 4} },
+      { "parallel": 1, "config": {"nprobe": 8} },
+      { "parallel": 1, "config": {"nprobe": 16} },
+      { "parallel": 1, "config": {"nprobe": 32} }
+    ],
+    "upload_params": { "parallel": 8, "index_type": "GPU_IVF_FLAT", "index_params": {"nlist": 128, "cache_dataset_on_device": "false"  } }
+  },
+  {
+    "name": "milvus-testing-gpuivfflat-128-withcache",
+    "engine": "milvus",
+    "connection_params": {},
+    "collection_params": {},
+    "search_params": [
+      { "parallel": 1, "config": {"nprobe": 4} },
+      { "parallel": 1, "config": {"nprobe": 8} },
+      { "parallel": 1, "config": {"nprobe": 16} },
+      { "parallel": 1, "config": {"nprobe": 32} }
+    ],
+    "upload_params": { "parallel": 8, "index_type": "GPU_IVF_FLAT", "index_params": {"nlist": 128, "cache_dataset_on_device": "true"  } }
+  },
+  {
+    "name": "milvus-testing-gpuivfflat-256",
+    "engine": "milvus",
+    "connection_params": {},
+    "collection_params": {},
+    "search_params": [
+      { "parallel": 1, "config": {"nprobe": 4} },
+      { "parallel": 1, "config": {"nprobe": 8} },
+      { "parallel": 1, "config": {"nprobe": 16} },
+      { "parallel": 1, "config": {"nprobe": 32} },
+      { "parallel": 1, "config": {"nprobe": 64} }
+    ],
+    "upload_params": { "parallel": 8, "index_type": "GPU_IVF_FLAT", "index_params": {"nlist": 256, "cache_dataset_on_device": "false"  } }
+  },
+  {
+    "name": "milvus-testing-gpuivfflat-512",
+    "engine": "milvus",
+    "connection_params": {},
+    "collection_params": {},
+    "search_params": [
+        { "parallel": 1, "config": {"nprobe": 4} },
+        { "parallel": 1, "config": {"nprobe": 8} },
+        { "parallel": 1, "config": {"nprobe": 16} },
+        { "parallel": 1, "config": {"nprobe": 32} },
+        { "parallel": 1, "config": {"nprobe": 64} }
+    ],
+    "upload_params": { "parallel": 8, "index_type": "GPU_IVF_FLAT", "index_params": {"nlist": 512, "cache_dataset_on_device": "false"  } }
+  },
+    {
+        "name": "milvus-testing-gpuivfflat-1024",
+        "engine": "milvus",
+        "connection_params": {},
+        "collection_params": {},
+        "search_params": [
+            { "parallel": 1, "config": {"nprobe": 4} },
+            { "parallel": 1, "config": {"nprobe": 8} },
+            { "parallel": 1, "config": {"nprobe": 16} },
+            { "parallel": 1, "config": {"nprobe": 32} },
+            { "parallel": 1, "config": {"nprobe": 64} }
+        ],
+        "upload_params": { "parallel": 8, "index_type": "GPU_IVF_FLAT", "index_params": {"nlist": 1024, "cache_dataset_on_device": "false"  } }
+    },
+    {
+        "name": "milvus-testing-gpuivfflat-2048",
+        "engine": "milvus",
+        "connection_params": {},
+        "collection_params": {},
+        "search_params": [
+            { "parallel": 1, "config": {"nprobe": 4} },
+            { "parallel": 1, "config": {"nprobe": 8} },
+            { "parallel": 1, "config": {"nprobe": 16} },
+            { "parallel": 1, "config": {"nprobe": 32} },
+            { "parallel": 1, "config": {"nprobe": 64} },
+            { "parallel": 1, "config": {"nprobe": 128} },
+            { "parallel": 1, "config": {"nprobe": 256} }
+        ],
+        "upload_params": { "parallel": 8, "index_type": "GPU_IVF_FLAT", "index_params": {"nlist": 2048, "cache_dataset_on_device": "false"  } }
+    },
+    {
+        "name": "milvus-testing-gpuivfflat-4096",
+        "engine": "milvus",
+        "connection_params": {},
+        "collection_params": {},
+        "search_params": [
+            { "parallel": 1, "config": {"nprobe": 4} },
+            { "parallel": 1, "config": {"nprobe": 8} },
+            { "parallel": 1, "config": {"nprobe": 16} },
+            { "parallel": 1, "config": {"nprobe": 32} },
+            { "parallel": 1, "config": {"nprobe": 64} },
+            { "parallel": 1, "config": {"nprobe": 128} },
+            { "parallel": 1, "config": {"nprobe": 256} }
+        ],
+        "upload_params": { "parallel": 8, "index_type": "GPU_IVF_FLAT", "index_params": {"nlist": 4096, "cache_dataset_on_device": "false"  } }
+    },
+    {
+        "name": "milvus-testing-gpuivfflat-8192",
+        "engine": "milvus",
+        "connection_params": {},
+        "collection_params": {},
+        "search_params": [
+            { "parallel": 1, "config": {"nprobe": 4} },
+            { "parallel": 1, "config": {"nprobe": 8} },
+            { "parallel": 1, "config": {"nprobe": 16} },
+            { "parallel": 1, "config": {"nprobe": 32} },
+            { "parallel": 1, "config": {"nprobe": 64} },
+            { "parallel": 1, "config": {"nprobe": 128} },
+            { "parallel": 1, "config": {"nprobe": 256} }
+        ],
+        "upload_params": { "parallel": 8, "index_type": "GPU_IVF_FLAT", "index_params": {"nlist": 8192, "cache_dataset_on_device": "false"  } }
+    },
+    {
+        "name": "milvus-testing-gpuivfpq-64-m-16",
+        "engine": "milvus",
+        "connection_params": {},
+        "collection_params": {},
+        "search_params": [
+          { "parallel": 1, "config": {"nprobe": 4} },
+          { "parallel": 1, "config": {"nprobe": 8} },
+          { "parallel": 1, "config": {"nprobe": 16} },
+          { "parallel": 1, "config": {"nprobe": 32} }
+        ],
+        "upload_params": { "parallel": 8, "index_type": "GPU_IVF_PQ", "index_params": {"nlist": 64, "m": 16, "cache_dataset_on_device": "false"  } }
+      },
+  {
+    "name": "milvus-testing-gpuivfpq-128-m-16",
+    "engine": "milvus",
+    "connection_params": {},
+    "collection_params": {},
+    "search_params": [
+      { "parallel": 1, "config": {"nprobe": 4} },
+      { "parallel": 1, "config": {"nprobe": 8} },
+      { "parallel": 1, "config": {"nprobe": 16} },
+      { "parallel": 1, "config": {"nprobe": 32} }
+    ],
+    "upload_params": { "parallel": 8, "index_type": "GPU_IVF_PQ", "index_params": {"nlist": 128,  "m": 16, "cache_dataset_on_device": "false"  } }
+  },
+  {
+    "name": "milvus-testing-gpuivfpq-128-m-16-withcache",
+    "engine": "milvus",
+    "connection_params": {},
+    "collection_params": {},
+    "search_params": [
+      { "parallel": 1, "config": {"nprobe": 4} },
+      { "parallel": 1, "config": {"nprobe": 8} },
+      { "parallel": 1, "config": {"nprobe": 16} },
+      { "parallel": 1, "config": {"nprobe": 32} }
+    ],
+    "upload_params": { "parallel": 8, "index_type": "GPU_IVF_PQ", "index_params": {"nlist": 128,  "m": 16, "cache_dataset_on_device": "true"  } }
+  },
+  {
+    "name": "milvus-testing-gpuivfpq-128-m-240",
+    "engine": "milvus",
+    "connection_params": {},
+    "collection_params": {},
+    "search_params": [
+      { "parallel": 1, "config": {"nprobe": 4} },
+      { "parallel": 1, "config": {"nprobe": 8} },
+      { "parallel": 1, "config": {"nprobe": 16} },
+      { "parallel": 1, "config": {"nprobe": 32} }
+    ],
+    "upload_params": { "parallel": 8, "index_type": "GPU_IVF_PQ", "index_params": {"nlist": 128,  "m": 240, "cache_dataset_on_device": "false"  } }
+  },
+  {
+    "name": "milvus-testing-gpuivfpq-256-m-16",
+    "engine": "milvus",
+    "connection_params": {},
+    "collection_params": {},
+    "search_params": [
+      { "parallel": 1, "config": {"nprobe": 4} },
+      { "parallel": 1, "config": {"nprobe": 8} },
+      { "parallel": 1, "config": {"nprobe": 16} },
+      { "parallel": 1, "config": {"nprobe": 32} },
+      { "parallel": 1, "config": {"nprobe": 64} }
+    ],
+    "upload_params": { "parallel": 8, "index_type": "GPU_IVF_PQ", "index_params": {"nlist": 256,  "m": 16, "cache_dataset_on_device": "false"  } }
+  },
+  {
+    "name": "milvus-testing-gpuivfpq-512-m-16",
+    "engine": "milvus",
+    "connection_params": {},
+    "collection_params": {},
+    "search_params": [
+        { "parallel": 1, "config": {"nprobe": 4} },
+        { "parallel": 1, "config": {"nprobe": 8} },
+        { "parallel": 1, "config": {"nprobe": 16} },
+        { "parallel": 1, "config": {"nprobe": 32} },
+        { "parallel": 1, "config": {"nprobe": 64} }
+    ],
+    "upload_params": { "parallel": 8, "index_type": "GPU_IVF_PQ", "index_params": {"nlist": 512, "m": 16, "cache_dataset_on_device": "false"  } }
+  },
+    {
+        "name": "milvus-testing-gpuivfpq-1024-m-16",
+        "engine": "milvus",
+        "connection_params": {},
+        "collection_params": {},
+        "search_params": [
+            { "parallel": 1, "config": {"nprobe": 4} },
+            { "parallel": 1, "config": {"nprobe": 8} },
+            { "parallel": 1, "config": {"nprobe": 16} },
+            { "parallel": 1, "config": {"nprobe": 32} },
+            { "parallel": 1, "config": {"nprobe": 64} }
+        ],
+        "upload_params": { "parallel": 8, "index_type": "GPU_IVF_PQ", "index_params": {"nlist": 1024, "m": 16, "cache_dataset_on_device": "false"  } }
+    },
+    {
+        "name": "milvus-testing-gpuivfpq-2048-m-16",
+        "engine": "milvus",
+        "connection_params": {},
+        "collection_params": {},
+        "search_params": [
+            { "parallel": 1, "config": {"nprobe": 4} },
+            { "parallel": 1, "config": {"nprobe": 8} },
+            { "parallel": 1, "config": {"nprobe": 16} },
+            { "parallel": 1, "config": {"nprobe": 32} },
+            { "parallel": 1, "config": {"nprobe": 64} },
+            { "parallel": 1, "config": {"nprobe": 128} },
+            { "parallel": 1, "config": {"nprobe": 256} }
+        ],
+        "upload_params": { "parallel": 8, "index_type": "GPU_IVF_PQ", "index_params": {"nlist": 2048, "m": 16,"cache_dataset_on_device": "false"  } }
+    },
+    {
+        "name": "milvus-testing-gpuivfpq-2048-m-480",
+        "engine": "milvus",
+        "connection_params": {},
+        "collection_params": {},
+        "search_params": [
+            { "parallel": 1, "config": {"nprobe": 4} },
+            { "parallel": 1, "config": {"nprobe": 8} },
+            { "parallel": 1, "config": {"nprobe": 16} },
+            { "parallel": 1, "config": {"nprobe": 32} },
+            { "parallel": 1, "config": {"nprobe": 64} },
+            { "parallel": 1, "config": {"nprobe": 128} },
+            { "parallel": 1, "config": {"nprobe": 256} }
+        ],
+        "upload_params": { "parallel": 8, "index_type": "GPU_IVF_PQ", "index_params": {"nlist": 2048, "m": 480,"cache_dataset_on_device": "false"  } }
+    }
+]

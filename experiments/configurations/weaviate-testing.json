@@ -1,0 +1,14 @@
+[
+    {
+      "name": "weaviate-testing-scheme",
+      "engine": "weaviate",
+      "connection_params": {
+        "timeout_config": 1000
+      },
+      "collection_params": { "vectorIndexConfig": { "efConstruction": 256, "maxConnections": 16 } },
+      "search_params": [
+        { "parallel": 1, "config": { "ef": 64} }, { "parallel": 1, "config": { "ef": 128} }, { "parallel": 1, "config": { "ef": 256} }, { "parallel": 1, "config": { "ef": 512} }
+      ],
+      "upload_params": { "batch_size": 1024, "parallel": 8 }
+    }
+]

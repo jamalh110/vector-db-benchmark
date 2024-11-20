@@ -1,5 +1,41 @@
 [
   {
+    "name": "sift-1m-euclidean",
+    "vector_size": 128,
+    "distance": "l2",
+    "type": "h5",
+    "path": "sift-1m-euclidean/sift-1m-euclidean.hdf5",
+    "link": "http://ann-benchmarks.com/sift-128-euclidean.hdf5"
+  },
+  {
+    "name": "gist_random",
+    "vector_size": 960,
+    "distance": "l2",
+    "type": "jsonl",
+    "path": "/mydata/gist_random/"
+  },
+  {
+    "name": "gist_repeated",
+    "vector_size": 960,
+    "distance": "l2",
+    "type": "jsonl",
+    "path": "/mydata/gist_repeated/"
+  },
+  {
+    "name": "gist_base_random",
+    "vector_size": 960,
+    "distance": "l2",
+    "type": "jsonl",
+    "path": "/mydata/gist_base_random/"
+  },
+  {
+    "name": "gist_shifted",
+    "vector_size": 960,
+    "distance": "l2",
+    "type": "jsonl",
+    "path": "/mydata/gist_shifted/"
+  },
+  {
     "name": "glove-25-angular",
     "vector_size": 25,
     "distance": "cosine",

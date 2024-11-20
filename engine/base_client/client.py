@@ -38,7 +38,7 @@ class BaseClient:
         self, dataset_name: str, results: dict, search_id: int, search_params: dict
     ):
         now = datetime.now()
-        timestamp = now.strftime("%Y-%m-%d-%H-%M-%S")
+        timestamp = now.strftime("%Y-%m-%d-%H-%M-%S-%f")
         experiments_file = (
             f"{self.name}-{dataset_name}-search-{search_id}-{timestamp}.json"
         )

@@ -1,9 +1,11 @@
 [
   {
-    "name": "milvus-vt-m-16-ef-128",
-    "engine": "milvus",
-    "connection_params": {},
-    "collection_params": {},
+    "name": "weaviate-m-16-ef-256",
+    "engine": "weaviate",
+    "connection_params": {
+      "timeout_config": 1000
+    },
+    "collection_params": { "vectorIndexConfig": { "efConstruction": 256, "maxConnections": 16 } },
     "search_params": [
       { "parallel": 1, "config": { "ef": 64} }, { "parallel": 1, "config": { "ef": 128} }, { "parallel": 1, "config": { "ef": 256} }, { "parallel": 1, "config": { "ef": 512} },
       { "parallel": 2, "config": { "ef": 64} }, { "parallel": 2, "config": { "ef": 128} }, { "parallel": 2, "config": { "ef": 256} }, { "parallel": 2, "config": { "ef": 512} },
@@ -14,13 +16,15 @@
       { "parallel": 64, "config": { "ef": 64} }, { "parallel": 64, "config": { "ef": 128} }, { "parallel": 64, "config": { "ef": 256} }, { "parallel": 64, "config": { "ef": 512} },
       { "parallel": 100, "config": { "ef": 64} }, { "parallel": 100, "config": { "ef": 128} }, { "parallel": 100, "config": { "ef": 256} }, { "parallel": 100, "config": { "ef": 512} }
     ],
-    "upload_params": { "parallel": 16, "index_params": { "efConstruction": 128, "M": 16 } }
+    "upload_params": { "batch_size": 1024, "parallel": 8 }
   },
   {
-    "name": "milvus-vt-m-16-ef-256",
-    "engine": "milvus",
-    "connection_params": {},
-    "collection_params": {},
+    "name": "weaviate-m-16-ef-128",
+    "engine": "weaviate",
+    "connection_params": {
+      "timeout_config": 1000
+    },
+    "collection_params": { "vectorIndexConfig": { "efConstruction": 128, "maxConnections": 16 } },
     "search_params": [
       { "parallel": 1, "config": { "ef": 64} }, { "parallel": 1, "config": { "ef": 128} }, { "parallel": 1, "config": { "ef": 256} }, { "parallel": 1, "config": { "ef": 512} },
       { "parallel": 2, "config": { "ef": 64} }, { "parallel": 2, "config": { "ef": 128} }, { "parallel": 2, "config": { "ef": 256} }, { "parallel": 2, "config": { "ef": 512} },
@@ -31,13 +35,15 @@
       { "parallel": 64, "config": { "ef": 64} }, { "parallel": 64, "config": { "ef": 128} }, { "parallel": 64, "config": { "ef": 256} }, { "parallel": 64, "config": { "ef": 512} },
       { "parallel": 100, "config": { "ef": 64} }, { "parallel": 100, "config": { "ef": 128} }, { "parallel": 100, "config": { "ef": 256} }, { "parallel": 100, "config": { "ef": 512} }
     ],
-    "upload_params": { "parallel": 16, "index_params": { "efConstruction": 256, "M": 16 } }
+    "upload_params": { "batch_size": 1024, "parallel": 8 }
   },
   {
-    "name": "milvus-vt-m-32-ef-128",
-    "engine": "milvus",
-    "connection_params": {},
-    "collection_params": {},
+    "name": "weaviate-m-32-ef-128",
+    "engine": "weaviate",
+    "connection_params": {
+      "timeout_config": 1000
+    },
+    "collection_params": { "vectorIndexConfig": { "efConstruction": 128, "maxConnections": 32 } },
     "search_params": [
       { "parallel": 1, "config": { "ef": 64} }, { "parallel": 1, "config": { "ef": 128} }, { "parallel": 1, "config": { "ef": 256} }, { "parallel": 1, "config": { "ef": 512} },
       { "parallel": 2, "config": { "ef": 64} }, { "parallel": 2, "config": { "ef": 128} }, { "parallel": 2, "config": { "ef": 256} }, { "parallel": 2, "config": { "ef": 512} },
@@ -48,13 +54,15 @@
       { "parallel": 64, "config": { "ef": 64} }, { "parallel": 64, "config": { "ef": 128} }, { "parallel": 64, "config": { "ef": 256} }, { "parallel": 64, "config": { "ef": 512} },
       { "parallel": 100, "config": { "ef": 64} }, { "parallel": 100, "config": { "ef": 128} }, { "parallel": 100, "config": { "ef": 256} }, { "parallel": 100, "config": { "ef": 512} }
     ],
-    "upload_params": { "parallel": 16, "index_params": { "efConstruction": 128, "M": 32 } }
+    "upload_params": { "batch_size": 1024, "parallel": 8 }
   },
   {
-    "name": "milvus-vt-m-32-ef-256",
-    "engine": "milvus",
-    "connection_params": {},
-    "collection_params": {},
+    "name": "weaviate-m-32-ef-256",
+    "engine": "weaviate",
+    "connection_params": {
+      "timeout_config": 1000
+    },
+    "collection_params": { "vectorIndexConfig": { "efConstruction": 256, "maxConnections": 32 } },
     "search_params": [
       { "parallel": 1, "config": { "ef": 64} }, { "parallel": 1, "config": { "ef": 128} }, { "parallel": 1, "config": { "ef": 256} }, { "parallel": 1, "config": { "ef": 512} },
       { "parallel": 2, "config": { "ef": 64} }, { "parallel": 2, "config": { "ef": 128} }, { "parallel": 2, "config": { "ef": 256} }, { "parallel": 2, "config": { "ef": 512} },
@@ -65,13 +73,15 @@
       { "parallel": 64, "config": { "ef": 64} }, { "parallel": 64, "config": { "ef": 128} }, { "parallel": 64, "config": { "ef": 256} }, { "parallel": 64, "config": { "ef": 512} },
       { "parallel": 100, "config": { "ef": 64} }, { "parallel": 100, "config": { "ef": 128} }, { "parallel": 100, "config": { "ef": 256} }, { "parallel": 100, "config": { "ef": 512} }
     ],
-    "upload_params": { "parallel": 16, "index_params": { "efConstruction": 256, "M": 32 } }
+    "upload_params": { "batch_size": 1024, "parallel": 8 }
   },
   {
-    "name": "milvus-vt-m-32-ef-512",
-    "engine": "milvus",
-    "connection_params": {},
-    "collection_params": {},
+    "name": "weaviate-m-32-ef-512",
+    "engine": "weaviate",
+    "connection_params": {
+      "timeout_config": 1000
+    },
+    "collection_params": { "vectorIndexConfig": { "efConstruction": 512, "maxConnections": 32 } },
     "search_params": [
       { "parallel": 1, "config": { "ef": 64} }, { "parallel": 1, "config": { "ef": 128} }, { "parallel": 1, "config": { "ef": 256} }, { "parallel": 1, "config": { "ef": 512} },
       { "parallel": 2, "config": { "ef": 64} }, { "parallel": 2, "config": { "ef": 128} }, { "parallel": 2, "config": { "ef": 256} }, { "parallel": 2, "config": { "ef": 512} },
@@ -82,13 +92,15 @@
       { "parallel": 64, "config": { "ef": 64} }, { "parallel": 64, "config": { "ef": 128} }, { "parallel": 64, "config": { "ef": 256} }, { "parallel": 64, "config": { "ef": 512} },
       { "parallel": 100, "config": { "ef": 64} }, { "parallel": 100, "config": { "ef": 128} }, { "parallel": 100, "config": { "ef": 256} }, { "parallel": 100, "config": { "ef": 512} }
     ],
-    "upload_params": { "parallel": 16, "index_params": { "efConstruction": 512, "M": 32 } }
+    "upload_params": { "batch_size": 1024, "parallel": 8 }
   },
   {
-    "name": "milvus-vt-m-64-ef-256",
-    "engine": "milvus",
-    "connection_params": {},
-    "collection_params": {},
+    "name": "weaviate-m-64-ef-256",
+    "engine": "weaviate",
+    "connection_params": {
+      "timeout_config": 1000
+    },
+    "collection_params": { "vectorIndexConfig": { "efConstruction": 256, "maxConnections": 64 } },
     "search_params": [
       { "parallel": 1, "config": { "ef": 64} }, { "parallel": 1, "config": { "ef": 128} }, { "parallel": 1, "config": { "ef": 256} }, { "parallel": 1, "config": { "ef": 512} },
       { "parallel": 2, "config": { "ef": 64} }, { "parallel": 2, "config": { "ef": 128} }, { "parallel": 2, "config": { "ef": 256} }, { "parallel": 2, "config": { "ef": 512} },
@@ -99,13 +111,15 @@
       { "parallel": 64, "config": { "ef": 64} }, { "parallel": 64, "config": { "ef": 128} }, { "parallel": 64, "config": { "ef": 256} }, { "parallel": 64, "config": { "ef": 512} },
       { "parallel": 100, "config": { "ef": 64} }, { "parallel": 100, "config": { "ef": 128} }, { "parallel": 100, "config": { "ef": 256} }, { "parallel": 100, "config": { "ef": 512} }
     ],
-    "upload_params": { "parallel": 16, "index_params": { "efConstruction": 256, "M": 64 } }
+    "upload_params": { "batch_size": 1024, "parallel": 8 }
   },
   {
-    "name": "milvus-vt-m-64-ef-512",
-    "engine": "milvus",
-    "connection_params": {},
-    "collection_params": {},
+    "name": "weaviate-m-64-ef-512",
+    "engine": "weaviate",
+    "connection_params": {
+      "timeout_config": 1000
+    },
+    "collection_params": { "vectorIndexConfig": { "efConstruction": 512, "maxConnections": 64 } },
     "search_params": [
       { "parallel": 1, "config": { "ef": 64} }, { "parallel": 1, "config": { "ef": 128} }, { "parallel": 1, "config": { "ef": 256} }, { "parallel": 1, "config": { "ef": 512} },
       { "parallel": 2, "config": { "ef": 64} }, { "parallel": 2, "config": { "ef": 128} }, { "parallel": 2, "config": { "ef": 256} }, { "parallel": 2, "config": { "ef": 512} },
@@ -116,75 +130,6 @@
       { "parallel": 64, "config": { "ef": 64} }, { "parallel": 64, "config": { "ef": 128} }, { "parallel": 64, "config": { "ef": 256} }, { "parallel": 64, "config": { "ef": 512} },
       { "parallel": 100, "config": { "ef": 64} }, { "parallel": 100, "config": { "ef": 128} }, { "parallel": 100, "config": { "ef": 256} }, { "parallel": 100, "config": { "ef": 512} }
     ],
-    "upload_params": { "parallel": 16, "index_params": { "efConstruction": 512, "M": 64 } }
-  },
-  {
-    "name": "milvus-vt-gpuivfflat-128",
-    "engine": "milvus",
-    "connection_params": {},
-    "collection_params": {},
-    "search_params": [
-      { "parallel": 1, "config": {"nprobe": 8} },
-      { "parallel": 2, "config": {"nprobe": 8} },
-      { "parallel": 4, "config": {"nprobe": 8} },
-      { "parallel": 8, "config": {"nprobe": 8} },
-      { "parallel": 16, "config": {"nprobe": 8} },
-      { "parallel": 32, "config": {"nprobe": 8} },
-      { "parallel": 64, "config": {"nprobe": 8} },
-      { "parallel": 100, "config": {"nprobe": 8} }
-    ],
-    "upload_params": { "parallel": 8, "index_type": "GPU_IVF_FLAT", "index_params": {"nlist": 128, "cache_dataset_on_device": "false"  } }
-  },
-  {
-    "name": "milvus-vt-ivfflat-128",
-    "engine": "milvus",
-    "connection_params": {},
-    "collection_params": {},
-    "search_params": [
-      { "parallel": 1, "config": {"nprobe": 8} },
-      { "parallel": 2, "config": {"nprobe": 8} },
-      { "parallel": 4, "config": {"nprobe": 8} },
-      { "parallel": 8, "config": {"nprobe": 8} },
-      { "parallel": 16, "config": {"nprobe": 8} },
-      { "parallel": 32, "config": {"nprobe": 8} },
-      { "parallel": 64, "config": {"nprobe": 8} },
-      { "parallel": 100, "config": {"nprobe": 8} }
-    ],
-    "upload_params": { "parallel": 8, "index_type": "IVF_FLAT", "index_params": {"nlist": 128, "cache_dataset_on_device": "false"  } }
-  },
-  {
-    "name": "milvus-vt-gpuivfflat-4096-withcache",
-    "engine": "milvus",
-    "connection_params": {},
-    "collection_params": {},
-    "search_params": [
-      { "parallel": 32, "batch": 50, "threads": 10, "config": {"nprobe": 144} },
-      { "parallel": 32, "batch": 100, "threads": 10, "config": {"nprobe": 144} },
-      { "parallel": 32, "batch": 100, "threads": 20, "config": {"nprobe": 144} },
-      { "parallel": 32, "batch": 120, "threads": 30, "config": {"nprobe": 144} },
-      { "parallel": 64, "batch": 50, "threads": 10, "config": {"nprobe": 144} },
-      { "parallel": 64, "batch": 100, "threads": 10, "config": {"nprobe": 144} },
-      { "parallel": 64, "batch": 100, "threads": 20, "config": {"nprobe": 144} },
-      { "parallel": 64, "batch": 120, "threads": 30, "config": {"nprobe": 144} },
-      { "parallel": 16, "batch": 50, "threads": 10, "config": {"nprobe": 144} },
-      { "parallel": 16, "batch": 100, "threads": 10, "config": {"nprobe": 144} },
-      { "parallel": 16, "batch": 100, "threads": 20, "config": {"nprobe": 144} },
-      { "parallel": 16, "batch": 120, "threads": 30, "config": {"nprobe": 144} }
-    ],
-    "upload_params": { "parallel": 8, "index_type": "GPU_IVF_FLAT", "index_params": {"nlist": 4096, "cache_dataset_on_device": "true"  } }
-  },
-  {
-    "name": "milvus-vt-gpuivfflat-4096-withcache2",
-    "engine": "milvus",
-    "connection_params": {},
-    "collection_params": {},
-    "search_params": [
-      { "parallel": 1, "batch": 1, "threads": 1, "config": {"nprobe": 144} },
-      { "parallel": 2, "batch": 1, "threads": 1, "config": {"nprobe": 144} },
-      { "parallel": 2, "batch": 100, "threads": 20, "config": {"nprobe": 144} },
-      { "parallel": 4, "batch": 1, "threads": 1, "config": {"nprobe": 144} },
-      { "parallel": 4, "batch": 100, "threads": 20, "config": {"nprobe": 144} }
-    ],
-    "upload_params": { "parallel": 8, "index_type": "GPU_IVF_FLAT", "index_params": {"nlist": 4096, "cache_dataset_on_device": "true"  } }
+    "upload_params": { "batch_size": 1024, "parallel": 8 }
   }
 ]
