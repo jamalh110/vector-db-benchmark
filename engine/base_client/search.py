@@ -58,7 +58,7 @@ class BaseSearcher:
         raise NotImplementedError()
     
     @classmethod
-    def search_many(cls, query: List[Query], top: Optional[int]) -> Tuple[List[List[Tuple[int, float]]], List[float]]:
+    def search_many(cls, query: List[Query], top: Optional[int] = None, threads: Optional[int] = 1) -> Tuple[List[List[Tuple[int, float]]], List[float]]:
         raise NotImplementedError()
 
     @classmethod
@@ -152,8 +152,8 @@ class BaseSearcher:
                 
                 
                 if oldway:
-                    query_batches = list(self.batch_iterable(queries, batch))
-                    queries = [item for sublist in query_batches for item in sublist]
+                    # list is faster than iterator
+                    queries = list(queries)
                     print("starting")
                     start = time.perf_counter()
                     precisions, latencies = list(
