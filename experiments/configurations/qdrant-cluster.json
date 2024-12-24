@@ -1,0 +1,23 @@
+[
+  {
+    "name": "qdrant-cluster-default",
+    "engine": "qdrant",
+    "connection_params": { "timeout": 30 },
+    "collection_params": {
+      "optimizers_config": {
+        "max_segment_size": 1000000,
+        "default_segment_number": 3,
+        "memmap_threshold": 10000000
+      },
+      "shard_number": 4,
+      "hnsw_config": {
+        "m": 32,
+        "ef_construct": 512
+      }
+    },
+    "search_params": [
+      { "parallel": 32, "batch": 100, "threads": 20, "config": { "hnsw_ef": 32 } }
+    ],
+    "upload_params": { "parallel": 16, "batch_size": 1024 }
+  }
+]
