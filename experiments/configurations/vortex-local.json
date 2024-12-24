@@ -1,0 +1,13 @@
+[
+    {
+        "name": "vortex-local-test",
+        "engine": "vortex",
+        "connection_params": { "url": "http://localhost:8080" },
+        "collection_params": {},
+        "search_params": [
+            {"parallel": 1}
+        ],
+        "upload_params": {}
+    }
+]
+
